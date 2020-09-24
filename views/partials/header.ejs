@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Top News!</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../../../../css/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <a class="nav-brand" href="#"><strong>AAwad Breaking News!</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto toggler">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item dropup">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Languages <i class="fas fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href=<%="/language/en/category/"+apiParameters.category%>>English</a>
+            <a class="dropdown-item" href=<%="/language/ar/category/"+apiParameters.category%>>عربي</a>
+            <a class="dropdown-item" href=<%="/language/fr/category/"+apiParameters.category%>>française</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropup">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories <i class="fas fa-object-group"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href=<%="/language/"+apiParameters.language+"/category/politics"%>Politics</a>
+            <a class="dropdown-item" href=<%="/language/"+apiParameters.language+"/category/health"%>Health</a>
+            <a class="dropdown-item" href=<%="/language/"+apiParameters.language+"/category/business"%>Business</a>
+            <a class="dropdown-item" href=<%="/language/"+apiParameters.language+"/category/Technology"%>Technology</a>
+          </div>
+        </li>
+        <form class="form-inline my-2 my-md-0" action="/" method="post">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+      </ul>
+    </div>
+  </nav>
+  <h1>AAWAD <span class="breaking"><%=newsCategory%></span> News!</h1>
+  <div class="container">

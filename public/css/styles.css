@@ -1,0 +1,53 @@
+body{
+  text-align: center;
+  background-image: url("/images/background-red.jpg");
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 70px;
+}
+h1{
+  background-color: #900d0d;
+  border:solid 2px;
+  padding: 0 10px;
+  color: #DA0d09;
+}
+a{
+  text-decoration: none;
+  display: block;
+  color: #FFA000;
+}
+a:hover{
+  text-decoration: none;
+  color: #FFD000;
+}
+img{
+  width: 70%;
+  height: 200px;
+  margin: auto;
+}
+@media (max-width:500px){
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.breaking{
+  color: #FF0d09;
+}
+.news-block{
+  margin: 40px auto;
+}
+.check-results{
+ border: none;
+ font-size:10rem
+}
+@media (max-width:720px) {
+
+  h1.check-results{
+    font-size:3rem;
+  }
+}
+
+footer{
+  color:#888888;
+}

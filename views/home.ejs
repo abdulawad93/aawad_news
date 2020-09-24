@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") -%>
+    <div class="row">
+    <% topHeadlines.forEach(function(headline){ %>
+      <div class="col-lg-4 col-md-6 col-s-12">
+      <div class="news-block">
+        <h2 class="news-title"><a href=<%=headline.url%>><%=headline.title.substring(0,40)%>...</a></h2>
+        <a href=<%=headline.url%>><img src=<%=headline.urlToImage?headline.urlToImage:"images/breakingNews.jpg"%> alt=<%=headline.title.substring(0,headline.title.indexOf(" "))%>/></a>
+      </div>
+      </div>
+    <% }) %>
+    <hr />
+    </div>
+
+<%- include("partials/footer.ejs") -%>
